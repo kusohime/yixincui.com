@@ -1,0 +1,243 @@
+﻿body {
+    font-family: 'Cormorant', serif;
+    color: #8B0000;
+    background-color: #f9f4f4; /* Slightly dimmer/off-white background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack header, content, and footer vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    min-height: 100vh; /* Allow the body to grow dynamically */
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #8B0000;
+    color: #ffffff;
+    font-size: 1rem;
+    position: relative; /* Ensure it stays at the bottom of the content */
+    margin-top: 2rem; /* Add space above the footer */
+    border-top: 2px solid #B22222; /* Optional: Add a border for separation */
+}
+
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight slide-in effect */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; /* Ensure proper spacing between sidebar and main content */
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem 0; /* Add space above and below the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+
+
+
+.sidebar {
+    flex: 0 0 200px; /* Fixed width for the sidebar */
+    display: flex;
+    flex-direction: column; /* Stack sidebar items vertically */
+    align-items: center; /* Center items horizontally within the sidebar */
+    gap: 1rem; /* Add space between items */
+    padding: 1rem;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1; /* Take up the remaining space */
+    padding-left: 2rem; /* Add space between the sidebar and the content */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+    font-size: 1.2rem;
+}
+
+
+.profile-picture {
+    align-self: flex-start; /* Align the profile picture to the left */
+    max-width: 100px; /* Adjust the width of the profile picture */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight slide-in effect */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Schedule Section Styling */
+.schedule-section {
+    margin-top: 2rem;
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 4rem; /* Add both vertical and horizontal spacing between cards */
+    width: 100%; /* Ensure the grid takes up full width */
+    max-width: 900px; /* Optional: Limit the grid width */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+    .schedule-section h2 {
+        grid-column: 1 / -1; /* Make the heading span the full width of the grid */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #8B0000;
+}
+/* Performance Card Styling */
+.performance-card {
+    padding: 1rem;
+    background-color: #FAF3F3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure cards take up full grid cell width */
+    max-width: 300px; /* Optional: Limit the card width */
+    margin: 0 auto; /* Center the card within the grid cell */
+    text-align: left; /* Align text to the left */
+}
+
+
+    .performance-card p {
+        margin: 0.5rem 0;
+    }
+
+    .performance-card:hover {
+        transform: translateY(-5px); /* Slightly lift the card */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add a shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+
+.details-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: 'Cormorant', serif; /* Explicitly set the font-family */
+    color: #ffffff;
+    background-color: #8B0000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .details-button:hover {
+        background-color: #B22222;
+        transform: scale(1.05); /* Slightly enlarge the button */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+
+
+
+/* Menu Styling */
+.menu {
+    display: flex;
+    flex-direction: column; /* Stack the menu items vertically */
+    gap: 0.5rem; /* Add space between menu items */
+}
+
+    .menu a {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: #8B0000;
+        transition: color 0.3s ease; /* Smooth hover effect */
+    }
+
+        .menu a:hover {
+            text-decoration: underline;
+            color: #B22222; /* Slightly darker red on hover */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+
+        .menu a.active {
+            color: #ffffff; /* Change text color to white */
+            background-color: #8B0000; /* Add a subtle background color */
+            padding-left: 0.5rem; /* Adjust padding to align text without changing size */
+            text-decoration: none; /* Remove underline */
+        }
+
+
+/* Dynamic Image Section */
+.pictures {
+    display: flex;
+    flex-direction: row; /* Arrange image and caption in a row */
+    align-items: flex-start; /* Align the caption to the top of the image */
+    justify-content: flex-start; /* Align content to the left */
+    gap: 2rem; /* Add space between the image and the caption */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: 5rem; /* Center the container horizontally */
+    width: 60%; /* Adjust the width of the container */
+    animation: fadeIn 1.4s ease-in-out; /* Slight delay for pictures */
+}
+
+    .pictures img {
+        max-width: 300px;
+        border: 2px solid #8B0000;
+        cursor: pointer;
+        transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+
+        .pictures img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+#image-caption {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #8B0000;
+    text-align: left; /* Align the caption text to the left */
+    max-width: 300px; /* Optional: Limit the width of the caption */
+}
+
+/* Name and Dashboard Styling */
+.name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.dashboard {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between roles */
+}
+
+/* Font Styling */
+.cormorant-<uniquifier > {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
