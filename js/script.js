@@ -3,7 +3,7 @@ const imagesWithCaptions = [
     { src: "cats/2.jpeg", caption: "A tabby reading The Portable Karl Marx compiled by Eugene Kamenka." },
     { src: "cats/3.jpeg", caption: "A Bombay reading a Portuguese edition of Anti-Oedipus by Gilles Deleuze and <s>Féline</s> Félix Guattari." },
     { src: "cats/4.jpeg", caption: "A pica tabby eating Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5)." },
-    { src: "cats/5.jpeg", caption: "A (suspected) tabby conducting Frivolitätenmusik with a murine ensemble. An illustration by Edward Gorey from Old Possum’s Book of Practical Cats by T.S. Eliot." }
+    { src: "cats/5.jpeg", caption: "A (suspected) tabby conducting Frivolitätenmusik with a murine ensemble. An illustration by Edward Gorey from Old Possum’s Book of Practical Cats by T.S. Eliot." },
     { src: "cats/6.jpeg", caption: "A white cat cosplaying as a nun in a Horae, from Medieval Cats by felinology professor Catherine Nappington." }
 ];
 
